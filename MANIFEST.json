@@ -1,0 +1,1596 @@
+{
+ "generated": "2026-11-20T23:20:51Z",
+ "notes": {
+  "repos": "relevance-tagged by keyword classifier (may carry multiple tags or unclustered)",
+  "spaces": "hand-mapped primary vertical per space, one each; needs-tag = taxonomy pass pending"
+ },
+ "repos": [
+  {
+   "archived": false,
+   "name": "killinchu",
+   "url": "https://github.com/szl-holdings/killinchu",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-hf-frontier",
+   "url": "https://github.com/szl-holdings/szl-hf-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "a11oy",
+   "url": "https://github.com/szl-holdings/a11oy",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-gpu-bridge",
+   "url": "https://github.com/szl-holdings/szl-gpu-bridge",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-org-health",
+   "url": "https://github.com/szl-holdings/szl-org-health",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-capability-ledger",
+   "url": "https://github.com/szl-holdings/szl-capability-ledger",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-defensive-control-plane",
+   "url": "https://github.com/szl-holdings/szl-defensive-control-plane",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "platform",
+   "url": "https://github.com/szl-holdings/platform",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-blocked",
+   "url": "https://github.com/szl-holdings/szl-blocked",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-humanitarian-causal-twin",
+   "url": "https://github.com/szl-holdings/szl-humanitarian-causal-twin",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-microscopy-pilot",
+   "url": "https://github.com/szl-holdings/szl-microscopy-pilot",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "vgl-cold-replay",
+   "url": "https://github.com/szl-holdings/vgl-cold-replay",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-trust",
+   "url": "https://github.com/szl-holdings/szl-trust",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "formal-ai-underwriting",
+   "url": "https://github.com/szl-holdings/formal-ai-underwriting",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-quant-witness",
+   "url": "https://github.com/szl-holdings/szl-quant-witness",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "quant-curve",
+   "url": "https://github.com/szl-holdings/quant-curve",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-lake",
+   "url": "https://github.com/szl-holdings/szl-lake",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-muhu-frontier",
+   "url": "https://github.com/szl-holdings/szl-muhu-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-quant",
+   "url": "https://github.com/szl-holdings/szl-quant",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-asset-registry",
+   "url": "https://github.com/szl-holdings/szl-asset-registry",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-vertical-forge",
+   "url": "https://github.com/szl-holdings/szl-vertical-forge",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-router",
+   "url": "https://github.com/szl-holdings/szl-router",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-abstention-frontier",
+   "url": "https://github.com/szl-holdings/szl-abstention-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-papers",
+   "url": "https://github.com/szl-holdings/szl-papers",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-second-brain",
+   "url": "https://github.com/szl-holdings/szl-second-brain",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "anatomy",
+   "url": "https://github.com/szl-holdings/anatomy",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "frontier-console",
+   "url": "https://github.com/szl-holdings/frontier-console",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-receipt",
+   "url": "https://github.com/szl-holdings/szl-receipt",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-mesh",
+   "url": "https://github.com/szl-holdings/szl-mesh",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-forge",
+   "url": "https://github.com/szl-holdings/szl-forge",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-serve",
+   "url": "https://github.com/szl-holdings/szl-serve",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "a11oy-net",
+   "url": "https://github.com/szl-holdings/a11oy-net",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "holographic-unify",
+   "url": "https://github.com/szl-holdings/holographic-unify",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-block-kv",
+   "url": "https://github.com/szl-holdings/szl-block-kv",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-inference-gateway",
+   "url": "https://github.com/szl-holdings/szl-inference-gateway",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-ouroboros",
+   "url": "https://github.com/szl-holdings/szl-ouroboros",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "lutar-lean",
+   "url": "https://github.com/szl-holdings/lutar-lean",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-calibration",
+   "url": "https://github.com/szl-holdings/szl-calibration",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-gov",
+   "url": "https://github.com/szl-holdings/szl-gov",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-specdecode",
+   "url": "https://github.com/szl-holdings/szl-specdecode",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-quant-bench",
+   "url": "https://github.com/szl-holdings/szl-quant-bench",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "estate-cards",
+   "url": "https://github.com/szl-holdings/estate-cards",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": ".github",
+   "url": "https://github.com/szl-holdings/.github",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-billing",
+   "url": "https://github.com/szl-holdings/szl-billing",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-energy-mcp",
+   "url": "https://github.com/szl-holdings/szl-energy-mcp",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "hatun-mcp",
+   "url": "https://github.com/szl-holdings/hatun-mcp",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "amaru",
+   "url": "https://github.com/szl-holdings/amaru",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "rosie",
+   "url": "https://github.com/szl-holdings/rosie",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "sentra",
+   "url": "https://github.com/szl-holdings/sentra",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-khipu",
+   "url": "https://github.com/szl-holdings/szl-khipu",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-sovereign-os",
+   "url": "https://github.com/szl-holdings/szl-sovereign-os",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "puzzle-frontier",
+   "url": "https://github.com/szl-holdings/puzzle-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-evidence-core",
+   "url": "https://github.com/szl-holdings/szl-evidence-core",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-hatun-conformance",
+   "url": "https://github.com/szl-holdings/szl-hatun-conformance",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-attestation",
+   "url": "https://github.com/szl-holdings/szl-attestation",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-tinkuy",
+   "url": "https://github.com/szl-holdings/szl-tinkuy",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-retrieval-bench",
+   "url": "https://github.com/szl-holdings/szl-retrieval-bench",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-ci-witness",
+   "url": "https://github.com/szl-holdings/szl-ci-witness",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-energy-attest",
+   "url": "https://github.com/szl-holdings/szl-energy-attest",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-ops-runbook",
+   "url": "https://github.com/szl-holdings/szl-ops-runbook",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-command-center",
+   "url": "https://github.com/szl-holdings/szl-command-center",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-engine-bench",
+   "url": "https://github.com/szl-holdings/szl-engine-bench",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-crosscheck",
+   "url": "https://github.com/szl-holdings/szl-crosscheck",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-constellation",
+   "url": "https://github.com/szl-holdings/szl-constellation",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-showcase",
+   "url": "https://github.com/szl-holdings/szl-showcase",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "frontier-55-runs",
+   "url": "https://github.com/szl-holdings/frontier-55-runs",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "conformance-corpus",
+   "url": "https://github.com/szl-holdings/conformance-corpus",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-runbook-catalog",
+   "url": "https://github.com/szl-holdings/szl-runbook-catalog",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "puriq-live",
+   "url": "https://github.com/szl-holdings/puriq-live",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "agents-studio",
+   "url": "https://github.com/szl-holdings/agents-studio",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-command-lab",
+   "url": "https://github.com/szl-holdings/szl-command-lab",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-frontier",
+   "url": "https://github.com/szl-holdings/szl-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "alloyscape-estate-backup",
+   "url": "https://github.com/szl-holdings/alloyscape-estate-backup",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-cram",
+   "url": "https://github.com/szl-holdings/szl-cram",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-build-env",
+   "url": "https://github.com/szl-holdings/szl-build-env",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-openshell-receipts",
+   "url": "https://github.com/szl-holdings/szl-openshell-receipts",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-safe-stack",
+   "url": "https://github.com/szl-holdings/szl-safe-stack",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "wink-observatory",
+   "url": "https://github.com/szl-holdings/wink-observatory",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "lean-rlvr-proving-ground",
+   "url": "https://github.com/szl-holdings/lean-rlvr-proving-ground",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-portal",
+   "url": "https://github.com/szl-holdings/szl-portal",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "frontier-54-runs",
+   "url": "https://github.com/szl-holdings/frontier-54-runs",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-khipu-scholar",
+   "url": "https://github.com/szl-holdings/szl-khipu-scholar",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "uds-bundles",
+   "url": "https://github.com/szl-holdings/uds-bundles",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "khipu-consensus",
+   "url": "https://github.com/szl-holdings/khipu-consensus",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "vertical-services",
+   "url": "https://github.com/szl-holdings/vertical-services",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "lyte-lattice",
+   "url": "https://github.com/szl-holdings/lyte-lattice",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "curation-atlas",
+   "url": "https://github.com/szl-holdings/curation-atlas",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "nexus",
+   "url": "https://github.com/szl-holdings/nexus",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "khipu-sda-core",
+   "url": "https://github.com/szl-holdings/khipu-sda-core",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-doctrine",
+   "url": "https://github.com/szl-holdings/szl-doctrine",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-estate-os",
+   "url": "https://github.com/szl-holdings/szl-estate-os",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-govsign",
+   "url": "https://github.com/szl-holdings/szl-govsign",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-receipt-attn",
+   "url": "https://github.com/szl-holdings/szl-receipt-attn",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-lambda-gate",
+   "url": "https://github.com/szl-holdings/szl-lambda-gate",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "YARQA-ATTN",
+   "url": "https://github.com/szl-holdings/YARQA-ATTN",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "immune",
+   "url": "https://github.com/szl-holdings/immune",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-evidence-litellm",
+   "url": "https://github.com/szl-holdings/szl-evidence-litellm",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "the-grid",
+   "url": "https://github.com/szl-holdings/the-grid",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-formulas",
+   "url": "https://github.com/szl-holdings/szl-formulas",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-holdings.github.io",
+   "url": "https://github.com/szl-holdings/szl-holdings.github.io",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "evidence-studio",
+   "url": "https://github.com/szl-holdings/evidence-studio",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "david-leads",
+   "url": "https://github.com/szl-holdings/david-leads",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "lyte-services",
+   "url": "https://github.com/szl-holdings/lyte-services",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-atelier",
+   "url": "https://github.com/szl-holdings/szl-atelier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szlholdings.com",
+   "url": "https://github.com/szl-holdings/szlholdings.com",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "a-11-oy.github.io",
+   "url": "https://github.com/szl-holdings/a-11-oy.github.io",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "khipu-x1",
+   "url": "https://github.com/szl-holdings/khipu-x1",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-nemo",
+   "url": "https://github.com/szl-holdings/szl-nemo",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "governance-as-code",
+   "url": "https://github.com/szl-holdings/governance-as-code",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-substrate",
+   "url": "https://github.com/szl-holdings/szl-substrate",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-brand",
+   "url": "https://github.com/szl-holdings/szl-brand",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-evidence-mandate",
+   "url": "https://github.com/szl-holdings/szl-evidence-mandate",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "yarqa",
+   "url": "https://github.com/szl-holdings/yarqa",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "frontier-bench",
+   "url": "https://github.com/szl-holdings/frontier-bench",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "scientific-evidence-gate",
+   "url": "https://github.com/szl-holdings/scientific-evidence-gate",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-platform",
+   "url": "https://github.com/szl-holdings/szl-platform",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-skills",
+   "url": "https://github.com/szl-holdings/szl-skills",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "retrieval-bench",
+   "url": "https://github.com/szl-holdings/retrieval-bench",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "sda",
+   "url": "https://github.com/szl-holdings/sda",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-eclipse",
+   "url": "https://github.com/szl-holdings/szl-eclipse",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "a11oy-factory",
+   "url": "https://github.com/szl-holdings/a11oy-factory",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "vsp-otel",
+   "url": "https://github.com/szl-holdings/vsp-otel",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "gdw-frontier",
+   "url": "https://github.com/szl-holdings/gdw-frontier",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "ayllu",
+   "url": "https://github.com/szl-holdings/ayllu",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-seismic-review",
+   "url": "https://github.com/szl-holdings/szl-seismic-review",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-provctl",
+   "url": "https://github.com/szl-holdings/szl-provctl",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-drift",
+   "url": "https://github.com/szl-holdings/szl-drift",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "pentagi",
+   "url": "https://github.com/szl-holdings/pentagi",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-typesafe-triage",
+   "url": "https://github.com/szl-holdings/szl-typesafe-triage",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-real-estate",
+   "url": "https://github.com/szl-holdings/szl-real-estate",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-pin",
+   "url": "https://github.com/szl-holdings/szl-pin",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-invariants",
+   "url": "https://github.com/szl-holdings/szl-invariants",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-guardrail-receipt",
+   "url": "https://github.com/szl-holdings/szl-guardrail-receipt",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-maskmod",
+   "url": "https://github.com/szl-holdings/szl-maskmod",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-kernels",
+   "url": "https://github.com/szl-holdings/szl-kernels",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-repo-template",
+   "url": "https://github.com/szl-holdings/szl-repo-template",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "killinchu-ghsa-x4vh-8v6w-fg2m",
+   "url": "https://github.com/szl-holdings/killinchu-ghsa-x4vh-8v6w-fg2m",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "a11oy-ghsa-hch6-g4gg-wvv2",
+   "url": "https://github.com/szl-holdings/a11oy-ghsa-hch6-g4gg-wvv2",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-skills-ghsa-7gvv-whrr-6q3x",
+   "url": "https://github.com/szl-holdings/szl-skills-ghsa-7gvv-whrr-6q3x",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "szl-kernel-attest",
+   "url": "https://github.com/szl-holdings/szl-kernel-attest",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "ChaskaLLM",
+   "url": "https://github.com/szl-holdings/ChaskaLLM",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-wave1-report",
+   "url": "https://github.com/szl-holdings/szl-wave1-report",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-science-forum-corpus",
+   "url": "https://github.com/szl-holdings/szl-science-forum-corpus",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "registry-mirror",
+   "url": "https://github.com/szl-holdings/registry-mirror",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "ci-witness-action",
+   "url": "https://github.com/szl-holdings/ci-witness-action",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "ayllu-hf-space",
+   "url": "https://github.com/szl-holdings/ayllu-hf-space",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "aifor-science-protocol",
+   "url": "https://github.com/szl-holdings/aifor-science-protocol",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "acoustic-validation",
+   "url": "https://github.com/szl-holdings/acoustic-validation",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-v14",
+   "url": "https://github.com/szl-holdings/szl-v14",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "evidence-doctrine",
+   "url": "https://github.com/szl-holdings/evidence-doctrine",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "governed-receipt-spec",
+   "url": "https://github.com/szl-holdings/governed-receipt-spec",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "szl-acoustic-research",
+   "url": "https://github.com/szl-holdings/szl-acoustic-research",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "release-gate-fixture",
+   "url": "https://github.com/szl-holdings/release-gate-fixture",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "frontier-compass",
+   "url": "https://github.com/szl-holdings/frontier-compass",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "pitch-collateral",
+   "url": "https://github.com/szl-holdings/pitch-collateral",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "alloyscape-sandbox-forge",
+   "url": "https://github.com/szl-holdings/alloyscape-sandbox-forge",
+   "visibility": "PRIVATE"
+  },
+  {
+   "archived": false,
+   "name": "alloyscape-sandbox-pliny",
+   "url": "https://github.com/szl-holdings/alloyscape-sandbox-pliny",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": false,
+   "name": "alloyscape-sandbox-artifex",
+   "url": "https://github.com/szl-holdings/alloyscape-sandbox-artifex",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "cosmos",
+   "url": "https://github.com/szl-holdings/cosmos",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-provctl-live",
+   "url": "https://github.com/szl-holdings/szl-provctl-live",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-kernels-live",
+   "url": "https://github.com/szl-holdings/szl-kernels-live",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "receipt-chain-live",
+   "url": "https://github.com/szl-holdings/receipt-chain-live",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "ouroboros",
+   "url": "https://github.com/szl-holdings/ouroboros",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "energy-attest-holo",
+   "url": "https://github.com/szl-holdings/energy-attest-holo",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "docs-site",
+   "url": "https://github.com/szl-holdings/docs-site",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-uds-deployment",
+   "url": "https://github.com/szl-holdings/szl-uds-deployment",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-cookbook",
+   "url": "https://github.com/szl-holdings/szl-cookbook",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "governed-inference-meter",
+   "url": "https://github.com/szl-holdings/governed-inference-meter",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "khipu-lab",
+   "url": "https://github.com/szl-holdings/khipu-lab",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "counsel",
+   "url": "https://github.com/szl-holdings/counsel",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "immune-lattice",
+   "url": "https://github.com/szl-holdings/immune-lattice",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-experiments",
+   "url": "https://github.com/szl-holdings/szl-experiments",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "khipu-pages",
+   "url": "https://github.com/szl-holdings/khipu-pages",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-telemetry",
+   "url": "https://github.com/szl-holdings/szl-telemetry",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-organ-integrity",
+   "url": "https://github.com/szl-holdings/szl-organ-integrity",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "governed-norm-holo",
+   "url": "https://github.com/szl-holdings/governed-norm-holo",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "lambda-gate-holo",
+   "url": "https://github.com/szl-holdings/lambda-gate-holo",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "lean-kernel",
+   "url": "https://github.com/szl-holdings/lean-kernel",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-fleet-overlay",
+   "url": "https://github.com/szl-holdings/szl-fleet-overlay",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-governed-norm",
+   "url": "https://github.com/szl-holdings/szl-governed-norm",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "developers",
+   "url": "https://github.com/szl-holdings/developers",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-formula-ledger",
+   "url": "https://github.com/szl-holdings/szl-formula-ledger",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "fail-closed-governed-ai-services",
+   "url": "https://github.com/szl-holdings/fail-closed-governed-ai-services",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "evidence-typed-formula-governance",
+   "url": "https://github.com/szl-holdings/evidence-typed-formula-governance",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "warhacker-demo",
+   "url": "https://github.com/szl-holdings/warhacker-demo",
+   "visibility": "PUBLIC"
+  },
+  {
+   "archived": true,
+   "name": "szl-otel-mesh",
+   "url": "https://github.com/szl-holdings/szl-otel-mesh",
+   "visibility": "PUBLIC"
+  }
+ ],
+ "schema": "szl.vertical-portal-manifest/v1",
+ "spaces": {
+  "a11oy": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/a11oy",
+   "vertical": "estate-studios"
+  },
+  "a11oy-factory": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/a11oy-factory",
+   "vertical": "estate-studios"
+  },
+  "agents-studio": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/agents-studio",
+   "vertical": "estate-studios"
+  },
+  "anatomy": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/anatomy",
+   "vertical": "anatomy-medical"
+  },
+  "ayllu": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/ayllu",
+   "vertical": "estate-studios"
+  },
+  "counsel": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/counsel",
+   "vertical": "assurance-trust"
+  },
+  "counsel-assurance": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/counsel-assurance",
+   "vertical": "assurance-trust"
+  },
+  "curation-atlas": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/curation-atlas",
+   "vertical": "world-science-research"
+  },
+  "david-leads": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/david-leads",
+   "vertical": "world-science-research"
+  },
+  "estate-gardener": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/estate-gardener",
+   "vertical": "estate-studios"
+  },
+  "estate-holo": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/estate-holo",
+   "vertical": "estate-studios"
+  },
+  "eternal-auditor": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/eternal-auditor",
+   "vertical": "governance-evidence"
+  },
+  "finance": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/finance",
+   "vertical": "quant-markets"
+  },
+  "foundation-confirmation-v2": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/foundation-confirmation-v2",
+   "vertical": "governance-evidence"
+  },
+  "frontier-console": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/frontier-console",
+   "vertical": "frontier-training"
+  },
+  "frontier-showcase": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/frontier-showcase",
+   "vertical": "frontier-training"
+  },
+  "gdw-frontier": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/gdw-frontier",
+   "vertical": "frontier-training"
+  },
+  "governed-agent-bench": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/governed-agent-bench",
+   "vertical": "governance-evidence"
+  },
+  "governed-receipt-verifier": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/governed-receipt-verifier",
+   "vertical": "governance-evidence"
+  },
+  "holographic-unify": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/holographic-unify",
+   "vertical": "estate-studios"
+  },
+  "immune": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/immune",
+   "vertical": "immunity-cyber"
+  },
+  "immune-lattice": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/immune-lattice",
+   "vertical": "immunity-cyber"
+  },
+  "khipu-hologram": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/khipu-hologram",
+   "vertical": "khipu-ancient-math"
+  },
+  "khipu-playground": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/khipu-playground",
+   "vertical": "khipu-ancient-math"
+  },
+  "khipu-proof-loom": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/khipu-proof-loom",
+   "vertical": "khipu-ancient-math"
+  },
+  "khipu-yachay": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/khipu-yachay",
+   "vertical": "khipu-ancient-math"
+  },
+  "killinchu": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/killinchu",
+   "vertical": "maritime"
+  },
+  "living-anatomy": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/living-anatomy",
+   "vertical": "anatomy-medical"
+  },
+  "llm-router-live": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/llm-router-live",
+   "vertical": "estate-studios"
+  },
+  "lyte": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/lyte",
+   "vertical": "energy-physics"
+  },
+  "measured-honesty-census": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/measured-honesty-census",
+   "vertical": "governance-evidence"
+  },
+  "newton-trust-upgrade": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/newton-trust-upgrade",
+   "vertical": "assurance-trust"
+  },
+  "nexus": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/nexus",
+   "vertical": "estate-studios"
+  },
+  "oac-system-health-lab": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/oac-system-health-lab",
+   "vertical": "governance-evidence"
+  },
+  "prove-it": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/prove-it",
+   "vertical": "governance-evidence"
+  },
+  "puriq-markets": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/puriq-markets",
+   "vertical": "quant-markets"
+  },
+  "sentra": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/sentra",
+   "vertical": "governance-evidence"
+  },
+  "szl-atelier": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-atelier",
+   "vertical": "creativity"
+  },
+  "szl-bench-suite": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-bench-suite",
+   "vertical": "estate-studios"
+  },
+  "szl-brand-campaign": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-brand-campaign",
+   "vertical": "estate-studios"
+  },
+  "szl-chief-engineer": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-chief-engineer",
+   "vertical": "estate-studios"
+  },
+  "szl-command-center": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-command-center",
+   "vertical": "estate-studios"
+  },
+  "szl-command-lab": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-command-lab",
+   "vertical": "estate-studios"
+  },
+  "szl-constellation": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-constellation",
+   "vertical": "estate-studios"
+  },
+  "szl-constellation-staging": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-constellation-staging",
+   "vertical": "estate-studios"
+  },
+  "szl-cram-demo": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-cram-demo",
+   "vertical": "frontier-training"
+  },
+  "szl-cyber-shield": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-cyber-shield",
+   "vertical": "immunity-cyber"
+  },
+  "szl-dream-architect": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-dream-architect",
+   "vertical": "estate-studios"
+  },
+  "szl-energy-hologram": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-energy-hologram",
+   "vertical": "energy-physics"
+  },
+  "szl-energy-ledger": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-energy-ledger",
+   "vertical": "energy-physics"
+  },
+  "szl-forge-lab": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-forge-lab",
+   "vertical": "estate-studios"
+  },
+  "szl-foundation-confirmation": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-foundation-confirmation",
+   "vertical": "governance-evidence"
+  },
+  "szl-frontier": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-frontier",
+   "vertical": "frontier-training"
+  },
+  "szl-frontier-deck": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-frontier-deck",
+   "vertical": "frontier-training"
+  },
+  "szl-infra-warden": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-infra-warden",
+   "vertical": "estate-studios"
+  },
+  "szl-khipu": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-khipu",
+   "vertical": "khipu-ancient-math"
+  },
+  "szl-marketing": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-marketing",
+   "vertical": "estate-studios"
+  },
+  "szl-marketing-1-1": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-marketing-1-1",
+   "vertical": "estate-studios"
+  },
+  "szl-model-inference-lab": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-model-inference-lab",
+   "vertical": "estate-studios"
+  },
+  "szl-muhu-frontier": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-muhu-frontier",
+   "vertical": "frontier-training"
+  },
+  "szl-provenance-pitch": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-provenance-pitch",
+   "vertical": "governance-evidence"
+  },
+  "szl-receipts-chain": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-receipts-chain",
+   "vertical": "governance-evidence"
+  },
+  "szl-research-council": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-research-council",
+   "vertical": "world-science-research"
+  },
+  "szl-router-control": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-router-control",
+   "vertical": "estate-studios"
+  },
+  "szl-safe-stack": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-safe-stack",
+   "vertical": "immunity-cyber"
+  },
+  "szl-science-gate-studio": {
+   "sdk": "gradio",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-science-gate-studio",
+   "vertical": "world-science-research"
+  },
+  "szl-second-brain": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-second-brain",
+   "vertical": "world-science-research"
+  },
+  "szl-seismic-review": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-seismic-review",
+   "vertical": "world-science-research"
+  },
+  "szl-typesafe-triage": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-typesafe-triage",
+   "vertical": "estate-studios"
+  },
+  "szlholdings-si": {
+   "sdk": "docker",
+   "stage_snapshot": "PAUSED",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/szlholdings-si",
+   "vertical": "estate-studios"
+  },
+  "terra": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/terra",
+   "vertical": "assurance-trust"
+  },
+  "terra-assurance": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/terra-assurance",
+   "vertical": "assurance-trust"
+  },
+  "the-grid": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/the-grid",
+   "vertical": "estate-studios"
+  },
+  "training-ledger-explorer": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/training-ledger-explorer",
+   "vertical": "frontier-training"
+  },
+  "truth-router": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/truth-router",
+   "vertical": "governance-evidence"
+  },
+  "vertical-services": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/vertical-services",
+   "vertical": "estate-studios"
+  },
+  "wink-observatory": {
+   "sdk": "static",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/wink-observatory",
+   "vertical": "world-science-research"
+  },
+  "yarqa": {
+   "sdk": "docker",
+   "stage_snapshot": "RUNNING",
+   "url": "https://huggingface.co/spaces/SZLHOLDINGS/yarqa",
+   "vertical": "estate-studios"
+  }
+ }
+}
