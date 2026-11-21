@@ -38,6 +38,8 @@ class RuntimeTests(unittest.TestCase):
         report = audit(fixture(), live=True, reader=lambda _: {"http": 200, "stage": "RUNNING"},
                        public_space_ids={"anatomy"}, now=now)
         self.assertTrue(report["coverage_complete"])
+        self.assertTrue(report["runtime_stage_all_running"])
+        self.assertEqual(report["non_running_or_unknown"], [])
         self.assertEqual(report["rows"][0]["classification"], "STAGE_RUNNING_ONLY")
         self.assertIsNone(report["rows"][0]["application_ready"])
         self.assertFalse(report["production_admitted"])
@@ -48,6 +50,8 @@ class RuntimeTests(unittest.TestCase):
         report = audit(fixture("PAUSED"), live=True,
                        reader=lambda _: {"http": 200, "stage": "PAUSED"})
         self.assertEqual(report["rows"][0]["classification"], "STAGE_NOT_RUNNING")
+        self.assertFalse(report["runtime_stage_all_running"])
+        self.assertEqual(report["non_running_or_unknown"][0]["id"], "anatomy")
 
     def test_http_503_cannot_be_green_even_with_running_text(self):
         report = audit(fixture(), live=True,
@@ -161,6 +165,15 @@ class RuntimeTests(unittest.TestCase):
                            reader=lambda _: {"http": 200, "stage": "RUNNING"},
                            public_space_ids=wrong)
             self.assertFalse(report["coverage_complete"])
+
+
+    def test_all_manifest_spaces_checked_is_not_all_runtime_ready(self):
+        report = audit(fixture("PAUSED"), live=True, public_space_ids={"anatomy"},
+                       reader=lambda _: {"http": 200, "stage": "PAUSED"})
+        self.assertTrue(report["coverage_complete"])
+        self.assertFalse(report["runtime_stage_all_running"])
+        self.assertEqual(report["non_running_or_unknown"][0]["stage"], "PAUSED")
+        self.assertFalse(report["production_admitted"])
 
 
 if __name__ == "__main__":
