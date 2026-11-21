@@ -39,6 +39,8 @@ class RuntimeTests(unittest.TestCase):
                        public_space_ids={"anatomy"}, now=now)
         self.assertTrue(report["coverage_complete"])
         self.assertTrue(report["runtime_stage_all_running"])
+        self.assertEqual(report["public_inventory_scope"], "PUBLIC_ANONYMOUS_ONLY")
+        self.assertEqual(report["vertical_runtime_stage_counts"]["UNASSIGNED"]["stage_running"], 1)
         self.assertEqual(report["non_running_or_unknown"], [])
         self.assertEqual(report["rows"][0]["classification"], "STAGE_RUNNING_ONLY")
         self.assertIsNone(report["rows"][0]["application_ready"])
@@ -173,6 +175,26 @@ class RuntimeTests(unittest.TestCase):
         self.assertTrue(report["coverage_complete"])
         self.assertFalse(report["runtime_stage_all_running"])
         self.assertEqual(report["non_running_or_unknown"][0]["stage"], "PAUSED")
+        self.assertFalse(report["production_admitted"])
+
+
+    def test_independent_per_vertical_stage_counts_do_not_infer_apps(self):
+        m = json.loads(fixture())
+        m["spaces"]["anatomy"]["vertical"] = "anatomy-medical"
+        m["spaces"]["szl-research-council"] = {
+            "url": "https://huggingface.co/spaces/SZLHOLDINGS/szl-research-council",
+            "vertical": "world-science-research",
+        }
+        raw = json.dumps(m).encode()
+        def reader(name):
+            return {"http": 200, "stage": "RUNNING" if name == "anatomy" else "SLEEPING"}
+        report = audit(raw, live=True, limit=2,
+                       reader=reader,
+                       public_space_ids={"anatomy", "szl-research-council"})
+        self.assertTrue(report["coverage_complete"])
+        self.assertFalse(report["runtime_stage_all_running"])
+        self.assertEqual(report["vertical_runtime_stage_counts"]["anatomy-medical"]["stage_running"], 1)
+        self.assertEqual(report["vertical_runtime_stage_counts"]["world-science-research"]["stage_not_running"], 1)
         self.assertFalse(report["production_admitted"])
 
 
