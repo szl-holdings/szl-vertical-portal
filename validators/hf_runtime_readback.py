@@ -14,12 +14,14 @@ import re
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-SCHEMA = "szl.hf-space-runtime-readback.v1"
+SCHEMA = "szl.hf-space-runtime-readback.v2"
 SPACE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,95}\Z")
 MAX_MANIFEST_BYTES = 2 * 1024 * 1024
 MAX_RESPONSE_BYTES = 64 * 1024
 MAX_SPACES = 200
+MAX_PUBLIC_LIST_BYTES = 4 * 1024 * 1024
 HF_BASE = "https://huggingface.co/api/spaces/SZLHOLDINGS/"
+HF_PUBLIC_LIST = "https://huggingface.co/api/spaces?author=SZLHOLDINGS&limit=201"
 
 
 class ReadbackHold(ValueError):
@@ -93,9 +95,52 @@ def read_space_stage(name: str, *, opener=urlopen, timeout: float = 5.0) -> dict
         return {"http": None, "stage": None, "classification": "RUNTIME_UNKNOWN"}
 
 
-def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=read_space_stage, now=None) -> dict:
+
+def read_public_space_ids(*, opener=urlopen, timeout: float = 10.0) -> set[str] | None:
+    """Independently list publicly visible org Spaces, not a credentialed census.
+
+    A truncated, denied, malformed, duplicate, or unexpectedly large list is
+    UNKNOWN, never zero, complete, or permission to create/wake a Space.
+    """
+    if not 0 < timeout <= 15:
+        raise ReadbackHold("INVALID_REQUEST_SCOPE")
+    req = Request(HF_PUBLIC_LIST, headers={
+        "Accept": "application/json", "User-Agent": "szl-vertical-portal-readback/1.0"}, method="GET")
+    try:
+        with opener(req, timeout=timeout) as response:
+            if response.status != 200:
+                return None
+            raw = response.read(MAX_PUBLIC_LIST_BYTES + 1)
+        if not 0 < len(raw) <= MAX_PUBLIC_LIST_BYTES:
+            return None
+        entries = json.loads(raw.decode("utf-8"), object_pairs_hook=_strict_pairs,
+                             parse_constant=lambda _: (_ for _ in ()).throw(ReadbackHold("NONFINITE_JSON")))
+        if not isinstance(entries, list) or not 0 < len(entries) < MAX_SPACES:
+            return None
+        names: set[str] = set()
+        for row in entries:
+            full_id = row.get("id") if isinstance(row, dict) else None
+            if not isinstance(full_id, str) or not full_id.startswith("SZLHOLDINGS/"):
+                return None
+            name = full_id[len("SZLHOLDINGS/"):]
+            if not SPACE_ID.fullmatch(name) or name in names:
+                return None
+            names.add(name)
+        return names
+    except (HTTPError, URLError, TimeoutError, OSError, UnicodeError,
+            json.JSONDecodeError, RecursionError, ReadbackHold):
+        return None
+
+
+def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=read_space_stage,
+          now=None, public_space_ids: set[str] | None = None) -> dict:
     manifest = parse_manifest(manifest_raw)
     names = sorted(manifest["spaces"])
+    public_list_checked = type(public_space_ids) is set and all(
+        isinstance(x, str) and SPACE_ID.fullmatch(x) for x in public_space_ids
+    )
+    observed = public_space_ids if public_list_checked else None
+    inventory_match = observed is not None and observed == set(names)
     if not isinstance(limit, int) or type(limit) is bool or not 1 <= limit <= MAX_SPACES:
         raise ReadbackHold("INVALID_SCAN_LIMIT")
     now = now or datetime.now(timezone.utc)
@@ -113,7 +158,11 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
         result = reader(name)
         if not isinstance(result, dict):
             result = {}
-        rows.append({"id": name, "http": result.get("http"), "stage": result.get("stage"),
+        vertical = manifest["spaces"][name].get("vertical")
+        if not isinstance(vertical, str) or not 0 < len(vertical) <= 64:
+            vertical = "UNASSIGNED"
+        rows.append({"id": name, "vertical": vertical,
+                     "http": result.get("http"), "stage": result.get("stage"),
                      "classification": classify_stage(result.get("stage")) if result.get("http") == 200 else "RUNTIME_UNKNOWN",
                      "application_ready": None, "renderer_verified": False,
                      "signed_inference_verified": False})
@@ -124,7 +173,13 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
         "snapshot_age_seconds": age_seconds,
         "snapshot_fresh": age_seconds is not None and 0 <= age_seconds <= 86400,
         "expected_spaces": len(names), "checked_spaces": len(rows),
-        "coverage_complete": live and len(rows) == len(names),
+        "manifest_coverage_complete": live and len(rows) == len(names),
+        "public_inventory_checked": observed is not None,
+        "public_inventory_matches_manifest": inventory_match,
+        "public_inventory_count": len(observed) if observed is not None else None,
+        "public_not_in_manifest": sorted(observed - set(names)) if observed is not None else None,
+        "manifest_not_in_public": sorted(set(names) - observed) if observed is not None else None,
+        "coverage_complete": live and len(rows) == len(names) and inventory_match,
         "readback_state": "LIVE_RUNTIME_STAGE_ONLY" if live else "SNAPSHOT_ONLY",
         "production_admitted": False, "inference_verified": False, "webgl_verified": False,
         "rows": rows,
@@ -141,12 +196,14 @@ def main(argv=None) -> int:
     try:
         manifest_raw = args.manifest.read_bytes()
         limit = MAX_SPACES if args.all else args.limit
-        report = audit(manifest_raw, live=args.live, limit=limit)
+        public_space_ids = read_public_space_ids() if args.live else None
+        report = audit(manifest_raw, live=args.live, limit=limit,
+                       public_space_ids=public_space_ids)
     except (OSError, ReadbackHold) as exc:
         print(json.dumps({"schema": SCHEMA, "state": "HOLD", "error": type(exc).__name__}))
         return 2
     print(json.dumps(report, sort_keys=True, separators=(",", ":")))
-    if args.live and (not report["coverage_complete"] or
+    if args.live and (not report["coverage_complete"] or not report["snapshot_fresh"] or
                       any(row["classification"] != "STAGE_RUNNING_ONLY" for row in report["rows"])):
         return 1
     return 0
