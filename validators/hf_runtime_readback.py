@@ -180,6 +180,12 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
         "public_not_in_manifest": sorted(observed - set(names)) if observed is not None else None,
         "manifest_not_in_public": sorted(set(names) - observed) if observed is not None else None,
         "coverage_complete": live and len(rows) == len(names) and inventory_match,
+        "runtime_stage_all_running": live and len(rows) == len(names) and bool(rows)
+                                     and all(row["classification"] == "STAGE_RUNNING_ONLY" for row in rows),
+        "non_running_or_unknown": [
+            {"id": row["id"], "vertical": row["vertical"], "stage": row["stage"], "http": row["http"]}
+            for row in rows if row["classification"] != "STAGE_RUNNING_ONLY"
+        ],
         "readback_state": "LIVE_RUNTIME_STAGE_ONLY" if live else "SNAPSHOT_ONLY",
         "production_admitted": False, "inference_verified": False, "webgl_verified": False,
         "rows": rows,
@@ -204,7 +210,7 @@ def main(argv=None) -> int:
         return 2
     print(json.dumps(report, sort_keys=True, separators=(",", ":")))
     if args.live and (not report["coverage_complete"] or not report["snapshot_fresh"] or
-                      any(row["classification"] != "STAGE_RUNNING_ONLY" for row in report["rows"])):
+                      not report["runtime_stage_all_running"]):
         return 1
     return 0
 
