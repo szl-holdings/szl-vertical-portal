@@ -1,0 +1,30 @@
+name: portal-python-witness
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Python source and offline fail-closed tests
+        run: |
+          python3 -B -m unittest discover -s validators -p 'test_*.py' -v
+          python3 -B -m validators.hf_runtime_readback > /dev/null
+
+  manual-live-stage-witness:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Read-only public HF runtime-stage audit (not production approval)
+        run: python3 -B -m validators.hf_runtime_readback --live --all
