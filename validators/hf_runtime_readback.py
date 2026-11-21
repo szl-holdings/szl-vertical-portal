@@ -166,6 +166,19 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
                      "classification": classify_stage(result.get("stage")) if result.get("http") == 200 else "RUNTIME_UNKNOWN",
                      "application_ready": None, "renderer_verified": False,
                      "signed_inference_verified": False})
+    by_vertical: dict[str, dict[str, int]] = {}
+    for row in rows:
+        counts = by_vertical.setdefault(row["vertical"], {
+            "checked": 0, "stage_running": 0, "stage_not_running": 0, "runtime_unknown": 0
+        })
+        counts["checked"] += 1
+        state = row["classification"]
+        if state == "STAGE_RUNNING_ONLY":
+            counts["stage_running"] += 1
+        elif state == "STAGE_NOT_RUNNING":
+            counts["stage_not_running"] += 1
+        else:
+            counts["runtime_unknown"] += 1
     return {
         "schema": SCHEMA,
         "checked_at_utc": now.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -174,6 +187,7 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
         "snapshot_fresh": age_seconds is not None and 0 <= age_seconds <= 86400,
         "expected_spaces": len(names), "checked_spaces": len(rows),
         "manifest_coverage_complete": live and len(rows) == len(names),
+        "public_inventory_scope": "PUBLIC_ANONYMOUS_ONLY",
         "public_inventory_checked": observed is not None,
         "public_inventory_matches_manifest": inventory_match,
         "public_inventory_count": len(observed) if observed is not None else None,
@@ -182,6 +196,7 @@ def audit(manifest_raw: bytes, *, live: bool = False, limit: int = 10, reader=re
         "coverage_complete": live and len(rows) == len(names) and inventory_match,
         "runtime_stage_all_running": live and len(rows) == len(names) and bool(rows)
                                      and all(row["classification"] == "STAGE_RUNNING_ONLY" for row in rows),
+        "vertical_runtime_stage_counts": dict(sorted(by_vertical.items())),
         "non_running_or_unknown": [
             {"id": row["id"], "vertical": row["vertical"], "stage": row["stage"], "http": row["http"]}
             for row in rows if row["classification"] != "STAGE_RUNNING_ONLY"
