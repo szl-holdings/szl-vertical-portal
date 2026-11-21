@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 import io
 import unittest
 from validators.hf_runtime_readback import (
-    ReadbackHold, audit, classify_stage, parse_manifest, read_space_stage
+    ReadbackHold, audit, classify_stage, parse_manifest, read_space_stage,
+    read_public_space_ids
 )
 
 
@@ -34,7 +35,8 @@ class Response:
 class RuntimeTests(unittest.TestCase):
     def test_running_stage_never_promotes_application_or_inference(self):
         now = datetime(2026, 11, 21, 1, tzinfo=timezone.utc)
-        report = audit(fixture(), live=True, reader=lambda _: {"http": 200, "stage": "RUNNING"}, now=now)
+        report = audit(fixture(), live=True, reader=lambda _: {"http": 200, "stage": "RUNNING"},
+                       public_space_ids={"anatomy"}, now=now)
         self.assertTrue(report["coverage_complete"])
         self.assertEqual(report["rows"][0]["classification"], "STAGE_RUNNING_ONLY")
         self.assertIsNone(report["rows"][0]["application_ready"])
@@ -61,7 +63,8 @@ class RuntimeTests(unittest.TestCase):
     def test_staleness_is_explicit_not_inferred_from_running(self):
         now = datetime(2026, 11, 23, tzinfo=timezone.utc)
         report = audit(fixture(), live=True,
-                       reader=lambda _: {"http": 200, "stage": "RUNNING"}, now=now)
+                       reader=lambda _: {"http": 200, "stage": "RUNNING"},
+                       public_space_ids={"anatomy"}, now=now)
         self.assertFalse(report["snapshot_fresh"])
 
     def test_duplicate_keys_fail_closed(self):
@@ -107,6 +110,57 @@ class RuntimeTests(unittest.TestCase):
             read_space_stage("../private")
         with self.assertRaisesRegex(ReadbackHold, "INVALID_REQUEST_SCOPE"):
             read_space_stage("anatomy", timeout=0)
+
+
+    def test_live_scan_without_independent_inventory_must_not_claim_complete(self):
+        report = audit(fixture(), live=True,
+                       reader=lambda _: {"http": 200, "stage": "RUNNING"})
+        self.assertTrue(report["manifest_coverage_complete"])
+        self.assertFalse(report["coverage_complete"])
+        self.assertFalse(report["public_inventory_checked"])
+
+    def test_public_inventory_mismatch_reports_added_and_missing(self):
+        report = audit(fixture(), live=True, public_space_ids={"new-space"},
+                       reader=lambda _: {"http": 200, "stage": "RUNNING"})
+        self.assertFalse(report["coverage_complete"])
+        self.assertEqual(report["public_not_in_manifest"], ["new-space"])
+        self.assertEqual(report["manifest_not_in_public"], ["anatomy"])
+
+    def test_official_inventory_exact_and_url_are_required(self):
+        requests = []
+        def opener(req, timeout):
+            requests.append((req.full_url, req.get_method()))
+            return Response(b'[{"id":"SZLHOLDINGS/anatomy"}]')
+        self.assertEqual(read_public_space_ids(opener=opener), {"anatomy"})
+        self.assertEqual(requests[0][0],
+                         "https://huggingface.co/api/spaces?author=SZLHOLDINGS&limit=201")
+        self.assertEqual(requests[0][1], "GET")
+
+    def test_duplicate_or_external_inventory_is_unavailable(self):
+        for bad in (
+            b'[{"id":"SZLHOLDINGS/anatomy"},{"id":"SZLHOLDINGS/anatomy"}]',
+            b'[{"id":"different-org/anatomy"}]',
+            b'[{"id":"SZLHOLDINGS/../private"}]',
+            b'[{"id":"SZLHOLDINGS/anatomy","id":"SZLHOLDINGS/another"}]',
+            b'[]',
+            b'[{"id":"SZLHOLDINGS/anatomy"},false]',
+        ):
+            with self.subTest(bad=bad[:80]):
+                self.assertIsNone(read_public_space_ids(
+                    opener=lambda *a, **kw: Response(bad)))
+
+    def test_oversized_and_invalid_inventory_is_unavailable(self):
+        self.assertIsNone(read_public_space_ids(
+            opener=lambda *a, **kw: Response(b'x' * (4 * 1024 * 1024 + 1))))
+        self.assertIsNone(read_public_space_ids(
+            opener=lambda *a, **kw: Response(b'not-json')))
+
+    def test_live_inventory_rejects_wrong_types(self):
+        for wrong in (["anatomy"], {"../private"}, set()):
+            report = audit(fixture(), live=True,
+                           reader=lambda _: {"http": 200, "stage": "RUNNING"},
+                           public_space_ids=wrong)
+            self.assertFalse(report["coverage_complete"])
 
 
 if __name__ == "__main__":
