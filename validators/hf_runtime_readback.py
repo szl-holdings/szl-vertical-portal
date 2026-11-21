@@ -15,7 +15,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 SCHEMA = "szl.hf-space-runtime-readback.v1"
-SPACE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,95}\\Z")
+SPACE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,95}\Z")
 MAX_MANIFEST_BYTES = 2 * 1024 * 1024
 MAX_RESPONSE_BYTES = 64 * 1024
 MAX_SPACES = 200
