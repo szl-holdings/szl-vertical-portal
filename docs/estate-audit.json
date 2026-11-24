@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "repo_name": "szl-vertical-portal",
+    "last_audit_date": "2026-11-24",
+    "loop_level": 1
+  },
+  "estate_context": {
+    "purpose_domain": "Estate vertical front door: one measured, fail-closed static index page linking all 78 SZLHOLDINGS HF Spaces, the 186-repo szl-holdings GitHub org, and per-vertical model/dataset counts, with a 3D alignment plan per space.",
+    "baseline_commit": "f777b7815a3fad7daa4da2328d346c271232e31b",
+    "leader_profiles": [
+      {
+        "name": "11ty/eleventy (assigned szl-vertical-portal domain leader)",
+        "url": "https://github.com/11ty/eleventy",
+        "checked_date": "2026-11-24"
+      }
+    ]
+  },
+  "evidence_index": {
+    "publications": [
+      {
+        "id": "github:11ty/eleventy",
+        "link": "https://github.com/11ty/eleventy",
+        "applicability": "Assigned canonical static-site leader relevant to the all-verticals estate front-door domain."
+      }
+    ],
+    "gap_register": [
+      "CI workflow is held at root level as ci-workflow.pending.yml pending workflow-scope credential (owner-gated); only portal-python-witness.yml is active under workflows; the pending workflow is not yet installed.",
+      "No tests/ directory present; the fail-closed validator under validators/ with locally receipted green (78/78 wired, all reachable in BUILD-RECEIPT.json) is the only verification evidence.",
+      "No pyproject.toml or package.json present; the static-first page (index.html, data.js) and self-hosted three.js under vendor/ have no declared dependency/build manifest.",
+      "GitHub Pages live page is not yet enabled (README notes the badge is pending Pages enablement)."
+    ],
+    "prioritized_changes": [
+      "Gap 1: owner installs the workflow-scope credential and moves ci-workflow.pending.yml into .github/workflows/ so the pending CI workflow runs alongside portal-python-witness.yml.",
+      "Gap 2: add a tests/ directory (or equivalent automated check) that runs the existing validators/ fail-closed validator so the receipted 78/78 wired result is enforced, not only receipted locally.",
+      "Gap 4: enable GitHub Pages for the repo and add the README live-page badge so the front door is actually served."
+    ]
+  },
+  "execution_trace": {}
+}
